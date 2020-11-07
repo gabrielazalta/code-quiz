@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geography Quiz</title>
+    <link rel= "stylesheet" href= "./assets/CSS/style.css">
+    <script src= "./assets/js/script.js"></script>
+</head>
+<body>
+
+    <!--Navigation-->
+    <div class="navigation" id="nav">
+        <div class= "score">
+            <a onclick= "getScore()" href= "#" class= "viewScore">
+                <h4>view high scores</h4>
+            </a>
+        </div>
+        <div class= "time">
+            <h4>
+                time: <span id= "timeLeft">0</span>
+            </h4>
+        </div>
+    </div>
+
+    <!--Quiz-->
+    <div id="body">
+        <div id="quiz">
+            <h1>Geography Quiz</h1>
+            <h3>Use your Geography knowledge to answer the questions of capitals around the world. Good luck! </h3>
+            <button onclick= "start()">Start Quiz!</buton>
+        </div>
+    </div>
+    
+</body>
+</html>
