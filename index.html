@@ -12,24 +12,22 @@
     <!--Navigation-->
     <div class="navigation" id="nav">
         <div class= "score">
-            <a onclick= "getScore()" href= "#" class= "viewScore">
-                <h4>view high scores</h4>
+            <a href= "#" class= "viewScore">
+                <h3>view high scores</h3>
             </a>
         </div>
-        <div class= "time">
-            <h4>
-                time: <span id= "timeLeft">0</span>
-            </h4>
-        </div>
+        <div class= "time"></div>
     </div>
 
     <!--Quiz-->
-    <div id="body">
-        <div id="quiz">
+    <div id="quizWrapper">
+        <div id="quizBody">
             <h1>Geography Quiz</h1>
-            <h3>Use your Geography knowledge to answer the questions of capitals around the world. Good luck! </h3>
-            <button onclick= "start()">Start Quiz!</buton>
-        </div>
+            <h2>Use your Geography knowledge to answer the following questions on capitals around the world. Good luck! </h2>
+            <ul id="multipleChoice"></ul>
+            <button id="timeStart">Start Quiz!</button>
+            </div>
+            <h4>you have 60 seconds to complete the quiz. careful! if you answer incorrectly 12 seconds will be deducted from your time. when you're done, try again to beat your high score!</h4>
     </div>
     
 </body>

@@ -4,7 +4,6 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
 
-/*navigation*/
 .navigation {
     display: flex;
     margin: 5px;
@@ -14,7 +13,7 @@ body {
     border-style: double none;
     border-width: 3px;
 }
-h4{
+h3{
     margin: 25px;
     font-size: 20px;
 }
@@ -25,13 +24,13 @@ h4{
 .viewScore:hover {
     color: coral;
 }
-#timeLeft {
+#time {
     color: coral;
 }
-#body {
+#quizWrapper {
     margin: 35px;
 }
-#quiz {
+#quizBody {
     width: 60%;
     margin: auto;
     display: flex;
@@ -42,7 +41,7 @@ h4{
 h1 {
     font-size: 32px;
 }
-h3 {
+h2 {
     font-size: 22px;
     padding: 12px;
     font-weight: lighter;
@@ -58,4 +57,16 @@ button {
 }
 button:hover {
     background-color: rgba(255, 127, 80, 0.473);
+}
+h4 {
+    font-size: 18px;
+    padding: 40px;
+    font-weight: lighter;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    font-variant: small-caps;
 }
