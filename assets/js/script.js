@@ -1,4 +1,3 @@
-//variable 
 
 //quiz questions
 var questions= [
@@ -29,8 +28,26 @@ var questions= [
     }
 ]
 
+//start timer once user clicks start
 
-var time = document.querySelector("#time");
+//display questions on a loop
+//after user selects answer, alert if correct or incorrect
+
+//once timer is done OR user finishes questions end game
+
+//end game function
+//display final score
+//allow user to enter initials to save score
+ 
+
+//remove 12 seconds every time user selects the wrong answer choice
+//add 5 points every time the user answers correctly
+//score = total points + time left
+
+
+
+
+/*var time = document.querySelector("#time");
 var seconds = document.querySelector("#timeStart")
 var timeStart = 0;
 var timeLeft = 60;
