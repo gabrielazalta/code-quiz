@@ -28,7 +28,31 @@ var questions= [
     }
 ]
 
+//variables
+var timerEl = document.getElementById("time");
+var startBtn = document.getElementById("timeStart");
+
 //start timer once user clicks start
+
+function countdown () {
+    var timeLeft = 60;
+
+    var timeInterval = setInterval(function () {
+       if (timeLeft <= 0) {
+           clearInterval(timeInterval);
+            timerEl.textContent = "time's up!'";
+       } else {
+           timerEl.textContent = "time: " + timeLeft;
+           startQuiz ();
+       }
+       timeLeft --;
+    }, 1000);
+}
+
+function startQuiz () {
+
+}
+startBtn.onclick = countdown;
 
 //display questions on a loop
 //after user selects answer, alert if correct or incorrect
@@ -45,52 +69,5 @@ var questions= [
 //score = total points + time left
 
 
-
-
-/*var time = document.querySelector("#time");
-var seconds = document.querySelector("#timeStart")
-var timeStart = 0;
-var timeLeft = 60;
-
-
-//time begins
-seconds.addEventListener("click", function () {
-
-    if(timeStart === 0) {
-        timeStart = setInterval(function () {
-            timeLeft--;
-            time.textContent = "time: " + timeLeft;
-
-            if (timeLeft <= 0) {
-                clearInterval(timeStart);
-                endGame ();
-                time.textContent = "time's up!";
-            }
-        }, 1000)
-    }
-    questionStart ();
-})
-
-function questionStart() {
-
-    quizWrapper.innerHTML = "";
-    multipleChoice.innerHTML = "";
-
-    for (var i = 0; i < questions.length; i++) {
-        var questionContent = questions[questionStart].q;
-        var questionChoice = questions[questionStart].ch;
-
-        quizWrapper.textContent = questionContent;
-    }
-
-    questionChoice.forEach(function(nextQuestion) {
-        var choices = document.createElement("li");
-        choices.textContent = nextQuestion;
-
-        quizWrapper.appendChild(multipleChoice);
-        multipleChoice.appendChild(choices);
-        choices.addEventListener("click", (compare));
-    })
-}
 
 
