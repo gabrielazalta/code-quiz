@@ -31,6 +31,7 @@ var questions= [
 //variables
 var timerEl = document.getElementById("time");
 var startBtn = document.getElementById("timeStart");
+var score = 0;
 
 //start timer once user clicks start
 
@@ -41,6 +42,7 @@ function countdown () {
        if (timeLeft <= 0) {
            clearInterval(timeInterval);
             timerEl.textContent = "time's up!'";
+            endGame();
        } else {
            timerEl.textContent = "time: " + timeLeft;
            startQuiz ();
@@ -49,24 +51,42 @@ function countdown () {
     }, 1000);
 }
 
-function startQuiz () {
-
-}
 startBtn.onclick = countdown;
+
 
 //display questions on a loop
 //after user selects answer, alert if correct or incorrect
+function startQuiz () {
 
-//once timer is done OR user finishes questions end game
+    var readyQuestion = document.getElementById("text") = "";
+    var userChoice = questions[i].q;
+    var promptQuestion = readyQuestion.replace(userChoice);
+
+    if (userChoice === questions[i].a) {
+        promptQuestion.textContent = ("Correct!");
+        //add 5 points every time the user answers correctly
+        score = score + 5;
+    } else {
+        promptQuestion.textContent = ("Wrong!");
+        //remove 12 seconds every time user selects the wrong answer choice
+        timeLeft = timeLeft - 12;
+    }
+}
 
 //end game function
-//display final score
-//allow user to enter initials to save score
- 
+function endGame () {
+    //display final score
+    //score = total points + time left
+    finalScore = score + timeLeft;
 
-//remove 12 seconds every time user selects the wrong answer choice
-//add 5 points every time the user answers correctly
-//score = total points + time left
+
+    //allow user to enter initials to save score
+
+}
+ 
+//high score
+
+
 
 
 
